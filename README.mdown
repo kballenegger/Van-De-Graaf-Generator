@@ -1,0 +1,7 @@
+# Van De Graaf Generator
+
+This is a generator for Van De Graaf (aka. Golden Section) canons of page construction. More info on [Wikipedia](http://en.wikipedia.org/wiki/Canons_of_page_construction).
+
+This could be expanded in the future for the different types of canons. For now, I've only created the most common one.
+
+Note: unrelated to the static electricity machine.
