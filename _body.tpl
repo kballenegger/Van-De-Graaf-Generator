@@ -11,6 +11,11 @@
 	       margin: auto;
 	       margin-top: 200px;
 	   }
+	   footer{
+	       margin-top: 50px;
+	       text-align: center;
+	       font-size: 0.8em;
+	   }
 	</style>
 </head>
 
@@ -18,6 +23,10 @@
 
     <div id="container">
         <?=$content?>
+    </div>
+
+    <div id="footer">
+        Copyright (c) <a href="http://kswizz.com/">Kenneth Ballenegger</a>
     </div>
 
     <script type="text/javascript">
