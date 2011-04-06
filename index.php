@@ -6,14 +6,14 @@ require_once 'vdg.php';
 if (empty($_POST['width']) && empty($_POST['height'])) {
 
 	$template = new ATTemplate(array());
-	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')));
+	$out_tpl = new ATTemplate(array('content' => $template->parse('_prompt.tpl')));
 	echo $out_tpl->parse('_body.tpl');
 
 } else if (empty($_POST['width']) || empty($_POST['height'])
 	|| !is_numeric($_POST['width']) || !is_numeric($_POST['height'])) {
 
 	$template = new ATTemplate(array('message' => 'Something went wrong!'));
-	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')));
+	$out_tpl = new ATTemplate(array('content' => $template->parse('_prompt.tpl')));
 	echo $out_tpl->parse('_body.tpl');
 
 } else {
