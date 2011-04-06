@@ -9,7 +9,7 @@ if (empty($_POST['width']) && empty($_POST['height'])) {
 } else if (empty($_POST['width']) || empty($_POST['height'])
 	|| !is_numeric($_POST['width']) || !is_numeric($_POST['height'])) {
 	$template = new ATTemplate(array('message' => 'Something went wrong!'));
-	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')))
+	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')));
 	echo $out_tpl->parse('_body.tpl');
 } else {
 	$width = $_POST['width'];
@@ -21,6 +21,6 @@ if (empty($_POST['width']) && empty($_POST['height'])) {
 			'inside' => $inside,
 			'outside' => $outside
 		));
-	$out_tpl = ATTemplate(array('content' => $template->parse('_response.tpl')))
+	$out_tpl = ATTemplate(array('content' => $template->parse('_response.tpl')));
 	echo $out_tpl->parse('_body.tpl');
 }
