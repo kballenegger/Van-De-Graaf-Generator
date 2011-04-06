@@ -4,13 +4,18 @@ require_once 'attemplate.inc.php';
 require_once 'vdg.php';
 
 if (empty($_POST['width']) && empty($_POST['height'])) {
-	$template = new ATTemplate(array());
-	echo $template->parse('_prompt.tpl');
+
+	$template = new ATTemplate();
+	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')));
+	echo $out_tpl->parse('_body.tpl');
+
 } else if (empty($_POST['width']) || empty($_POST['height'])
 	|| !is_numeric($_POST['width']) || !is_numeric($_POST['height'])) {
+
 	$template = new ATTemplate(array('message' => 'Something went wrong!'));
 	$out_tpl = ATTemplate(array('content' => $template->parse('_prompt.tpl')));
 	echo $out_tpl->parse('_body.tpl');
+
 } else {
 	$width = $_POST['width'];
 	$height = $_POST['height'];
