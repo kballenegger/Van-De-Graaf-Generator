@@ -26,6 +26,6 @@ if (empty($_POST['width']) && empty($_POST['height'])) {
 			'inside' => $inside,
 			'outside' => $outside
 		));
-	$out_tpl = ATTemplate(array('content' => $template->parse('_response.tpl')));
+	$out_tpl = new ATTemplate(array('content' => $template->parse('_response.tpl')));
 	echo $out_tpl->parse('_body.tpl');
 }
